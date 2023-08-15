@@ -77,6 +77,38 @@ public class Calculadora {
                 rta=Math.tan(h);
                 System.out.println(rta);
                 break;
+                
+                case 8:
+                System.out.print("Digite el índice, luego el radicando: ");
+                Scanner raiz=new Scanner(System.in);
+                a=raiz.nextFloat();
+                b=raiz.nextFloat();
+                rta=Math.pow(b, (1/a));
+                System.out.println(rta);
+                break;
+                
+                case 9:
+                System.out.print("Digite la base, luego el exponente: ");
+                Scanner pot=new Scanner(System.in);
+                a=pot.nextFloat();
+                b=pot.nextFloat();
+                rta=Math.pow(a,b);
+                System.out.println(rta);
+                break;
+                
+                case 10:
+                System.out.print("Digite el % de IVA, luego el valor"
+                        + " al que desea sacarle el IVA: ");
+                Scanner iva=new Scanner(System.in);
+                a=iva.nextFloat();
+                b=iva.nextFloat();
+                rta=((a/100)*b);
+                System.out.println(rta);
+                break;
+                
+                default:
+                    System.out.println("Intente ingresando un número que esté"
+                            + " dentro del menú de la calculadora.");
         }
     }
 }
