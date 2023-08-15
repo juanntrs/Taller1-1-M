@@ -11,27 +11,70 @@ public class Calculadora {
         System.out.print("Opción digitada: ");
         Scanner op = new Scanner(System.in);
         int opc;
-        float a, b, rta;
+        double a, b, rta;
         opc=op.nextInt();
         
         switch (opc){
             case 1:
-                System.out.println("Digite los números que desea sumar: ");
-                Scanner n1=new Scanner(System.in);
-                a=n1.nextFloat();
-                Scanner n2=new Scanner (System.in);
-                b=n2.nextFloat();
+                System.out.print("Digite los números que desea sumar: ");
+                Scanner suma=new Scanner(System.in);
+                a=suma.nextFloat();
+                b=suma.nextFloat();
                 rta=a+b;
                 System.out.println(rta);
                 break;
                 
             case 2:
-                System.out.println("Digite los números que desea sumar: ");
-                Scanner n1=new Scanner(System.in);
-                a=n1.nextFloat();
-                Scanner n2=new Scanner (System.in);
-                b=n2.nextFloat();
+                System.out.print("Digite los números que desea restar: ");
+                Scanner resta=new Scanner(System.in);
+                a=resta.nextFloat();
+                b=resta.nextFloat();
                 rta=a-b;
+                System.out.println(rta);
+                break;
+                
+                case 3:
+                System.out.print("Digite los números que desea multiplicar: ");
+                Scanner mult=new Scanner(System.in);
+                a=mult.nextFloat();
+                b=mult.nextFloat();
+                rta=a*b;
+                System.out.println(rta);
+                break;
+                
+                case 4:
+                System.out.print("Digite los números que desea dividir: ");
+                Scanner division=new Scanner(System.in);
+                a=division.nextFloat();
+                b=division.nextFloat();
+                rta=a/b;
+                System.out.println(rta);
+                break;
+                
+                case 5:
+                System.out.print("Digite el número del cuál desea saber el seno: ");
+                Scanner seno=new Scanner(System.in);
+                a=seno.nextFloat();
+                double r=Math.toRadians(a);
+                rta=Math.sin(r);
+                System.out.println(rta);
+                break;
+                
+                case 6:
+                System.out.print("Digite el número del cuál desea saber el coseno: ");
+                Scanner cos=new Scanner(System.in);
+                a=cos.nextFloat();
+                double t=Math.toRadians(a);
+                rta=Math.cos(t);
+                System.out.println(rta);
+                break;
+                
+                case 7:
+                System.out.print("Digite el número del cuál desea saber el tangente: ");
+                Scanner tan=new Scanner(System.in);
+                a=tan.nextFloat();
+                double h=Math.toRadians(a);
+                rta=Math.tan(h);
                 System.out.println(rta);
                 break;
         }
