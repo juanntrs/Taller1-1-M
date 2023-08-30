@@ -3,18 +3,24 @@ import java.util.Scanner;
 public class Calculadora {
 
     public static void main(String[] args) {
+        
         System.out.println("Digite el tipo de operación que desea realizar");
         System.out.println("~~~Calculadora~~~");
         System.out.println("1. Suma.\n2. Resta.\n3. Multiplicación.\n4. División."
                 + "\n5. Seno.\n6. Coseno.\n7. Tangente.\n8. Radicación"
-                + "\n9. Potenciación.\n10. Cálculo del IVA.");
+                + "\n9. Potenciación.\n10. Cálculo del IVA."
+                + "\n0. Salir.");
         System.out.print("Opción digitada: ");
         Scanner op = new Scanner(System.in);
         int opc;
         double a, b, rta;
+        String signo;
         opc=op.nextInt();
         
+        while(opc!=0){
+        
         switch (opc){
+            
             case 1:
                 System.out.print("Digite los números que desea sumar: ");
                 Scanner suma=new Scanner(System.in);
@@ -74,7 +80,7 @@ public class Calculadora {
                 Scanner tan=new Scanner(System.in);
                 a=tan.nextFloat();
                 double h=Math.toRadians(a);
-                rta=Math.tan(h);
+                rta=((Math.sin(h))/(Math.cos(h)));
                 System.out.println(rta);
                 break;
                 
@@ -109,6 +115,8 @@ public class Calculadora {
                 default:
                     System.out.println("Intente ingresando un número que esté"
                             + " dentro del menú de la calculadora.");
+                
+        }
         }
     }
 }
